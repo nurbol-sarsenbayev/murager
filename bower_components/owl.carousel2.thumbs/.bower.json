@@ -1,0 +1,44 @@
+{
+  "name": "owl.carousel2.thumbs",
+  "version": "0.1.7",
+  "homepage": "https://github.com/gijsroge/OwlCarousel2-Thumbs",
+  "authors": [
+    {
+      "name": "Gijs Rogé",
+      "homepage": "http://twitter.com/gijsroge"
+    }
+  ],
+  "description": "Enables thumbnail support for Owl Carousel 2.0",
+  "main": "dist/owl.carousel2.thumbs.js",
+  "license": "MIT",
+  "keywords": [
+    "Owl",
+    "Carousel",
+    "Thumbs",
+    "Thumbnails",
+    "jQuery"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "src",
+    "example",
+    "node_modules",
+    "bower_components",
+    "Gruntfile.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gijsroge/OwlCarousel2-Thumbs"
+  },
+  "_release": "0.1.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.7",
+    "commit": "ed81d9e1c5d271442bd519d6a2416d0d17a4b483"
+  },
+  "_source": "https://github.com/gijsroge/OwlCarousel2-Thumbs.git",
+  "_target": "^0.1.7",
+  "_originalSource": "owl.carousel2.thumbs",
+  "_direct": true
+}

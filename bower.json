@@ -1,0 +1,38 @@
+{
+  "name": "start-template-landing",
+  "description": "",
+  "authors": [
+    "Nurbol Sarsenbayev"
+  ],
+  "install": {
+    "path": "app/libs/",
+    "sources": {
+      "bootstrap-grid": [
+        "bower_components/bootstrap-grid/dist/bootstrap-grid.min.css"
+      ],
+      "font-awesome": [
+        "bower_components/font-awesome/css/font-awesome.min.css"
+      ],
+      "css-hamburgers": [
+        "bower_components/css-hamburgers/dist/hamburgers.min.css"
+      ]
+    }
+  },
+  "license": "ISC",
+  "keywords": [
+    "gulp",
+    "верстка"
+  ],
+  "homepage": "https://github.com/nurbol-sarsenbayev/start-template-gulp",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap-grid": "^3.3.6-beta.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "owl.carousel": "owl-carousel2#^2.2.1",
+    "css-hamburgers": "^0.9.1",
+    "jquery.maskedinput": "^1.4.1",
+    "equalheights": "equalHeights#*",
+    "selectize": "^0.12.4",
+    "fancybox": "^3.2.5"
+  }
+}

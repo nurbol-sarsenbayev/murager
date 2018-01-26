@@ -1,0 +1,15 @@
+@import "_mixins/font-face";
+
+@include font-face("FuturaPT", "../fonts/FuturaPT/Book/FuturaPT-Book", normal);
+@include font-face("FuturaPT", "../fonts/FuturaPT/BookItalic/FuturaPT-BookItalic", normal, italic);
+@include font-face("FuturaPT", "../fonts/FuturaPT/Medium/FuturaPT-Medium", 500);
+@include font-face("FuturaPT", "../fonts/FuturaPT/MediumItalic/FuturaPT-MediumItalic", 500, italic);
+@include font-face("FuturaPT", "../fonts/FuturaPT/Demi/FuturaPT-Demi", 600);
+@include font-face("FuturaPT", "../fonts/FuturaPT/DemiItalic/FuturaPT-DemiItalic", 600, italic);
+@include font-face("FuturaPT", "../fonts/FuturaPT/Bold/FuturaPT-Bold", bold);
+@include font-face("FuturaPT", "../fonts/FuturaPT/BoldItalic/FuturaPT-BoldItalic", bold, italic);
+@include font-face("FuturaPT", "../fonts/FuturaPT/Heavy/FuturaPT-Heavy", 800);
+@include font-face("FuturaPT", "../fonts/FuturaPT/HeavyItalic/FuturaPT-HeavyItalic", 800, italic);
+
+
+@include font-face("Amalfi", "../fonts/Amalfi/Regular/Amalfi-Regular", normal);
