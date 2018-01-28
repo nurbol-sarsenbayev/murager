@@ -78,7 +78,7 @@ body {
 	}
 
 	&-text {
-		font-weight: 13;
+		font-size: 13px;
 		margin-left: 15px;
 		color: $accent;
 	}
@@ -179,6 +179,10 @@ body {
 		background-color: #fdf8f1;
 	}
 
+	&.wooden {
+		background-image: url('../img/wooden-back.jpg');
+	}
+
 	&-image {
 		position: absolute;
 		top: 0;
@@ -226,22 +230,29 @@ body {
 				background-repeat: repeat-x;
 				top: 0;
 				bottom: 0;
+				background-position: left center;
+
+				.inverse & {
+					background-image: url('../img/title-ornament-white.png');					
+				}
 			}
 
 			&:before {
-				background-position: right center;
 				left: -3000px;
 				right: 100%;
+				transform: rotateY(180deg);
 			}
 
 			&:after {
 				right: -3000px;
 				left: 100%;
-				background-position: left center;
 			}
 		}
 
-		&.inverse {
+		&.inverse span {
+			&:before, &:after {
+				background-image: url('../img/title-ornament-white.png');					
+			}
 		}
 	}
 
@@ -315,7 +326,108 @@ body {
 	}
 
 	&-video-call {
+		&-content {
+			padding: 30px 0;
+			background-image: url('../img/video-call-ornament-1.png');
+			background-position: left center;
+			background-repeat: no-repeat;
+		}
 
+		.rect {
+			margin: 0 0 0 auto;
+			border: 6px solid $accent;
+			width: 670px;
+			height: 380px;
+			display: flex;
+			align-items: center;
+
+			background-image: url('../img/video-call-ornament-2.png');
+			background-position: bottom right;
+			background-repeat: no-repeat;			
+		}
+
+		video {
+			width: 408px;
+			margin-right: 60px;
+		}
+
+		.video {
+			&-content {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				font-family: FuturaPT;
+				margin-left: -200px;
+			}
+
+			&-title {
+				font-weight: 800;
+				font-size: 26px;
+				margin-bottom: 10px;
+			}
+
+			&-fio {
+				font-weight: 500;
+				font-size: 22px;
+				color: $accent;
+			}
+		}
+	}
+
+	&-reason {
+		&-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.reason {
+			width: 220px;
+			text-align: center;
+			margin: 0 10px 50px;
+		}
+
+		.item-circle {
+			margin: 0 auto 20px;
+		}
+	}
+
+	&-instruments {
+		.instrument {
+			position: relative;
+
+			&-title {
+				position: absolute;
+				left: 50%;
+				bottom: 40px;
+				transform: translateX(-50%);
+				font-family: FuturaPT;
+				font-weight: 800;
+				font-size: 20px;
+				color: $accent;
+				display: flex;
+				align-items: center;
+
+				&:before, &:after {
+					display: inline-block;
+					content: '';
+					width: 38px;
+					height: 27px;
+					background-image: url('../img/label-ornament.png');
+				}
+
+				&:before {
+					margin-right: 10px;
+				}
+
+				&:after {
+					margin-left: 10px;
+					transform: rotateY(180deg);
+				}
+			}
+
+
+		}
 	}
 
 	&-how {
@@ -380,99 +492,176 @@ body {
 		}
 	}
 
-	&-certificate {
+	&-question {
+		.question {
+			padding-top: 20px;
+			margin-bottom: 30px;
+			background-image: url('../img/question-ornament.png');
+			background-repeat: no-repeat;
+			background-position: 0 0;
 
-		.carousel-certificate {
-			&-item {
-				&-text {
-					margin-top: 10px;
-				}
+			&-title {
+				font-family: FuturaPT;
+				font-weight: 600;
+				color: $accent;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&-about {
+		&-content {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			& > div {
+				margin-bottom: 30px;
+			}
+		}
+
+		.accent {
+			font-family: FuturaPT;
+			font-size: 20px;
+			font-weight: 600;
+			
+			.big {
+				font-size: 72px;
+				font-weight: bold;
 			}	
 		}
 
-		.owl {
-			&-carousel {
-				padding: 0 70px;
+	}
+
+	&-order {
+
+		&-content {
+			position: relative;
+
+		}
+
+		.order {
+			display: flex;
+			align-items: center;
+			padding: 0 30px;
+
+			p {
+				max-width: 400px;
+				margin: 0 0 0 30px;
+			}
+
+			&-1 {
+				position: absolute;
+				top: -30px;
+				left: 0;
+				padding-left: 0;
+			}
+		}
+
+		.lines {
+			border: 2px solid $accent_dark;
+			height: 120px;
+
+			&-1 {
+				border-left: none;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				margin-left: 10px;
+
+			}
+
+			&-2 {
+				margin-top: -2px;
+				border-right: none;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.footer {
+	background-image: url('../img/header-ornament.jpg');
+	padding: 30px 0;
+
+	&-logo {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		img {
+			width: 97px;
+		}
+
+		.logo-text {
+			color: #fff;
+		}
+	}
+
+	&-contacts {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	&-socials {
+		a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			background-color: $default_text_color;
+			color: $accent;
+			font-size: 20px;
+
+		}
+	}
+
+	&-phones {
+		flex-grow: 1;
+		text-align: right;
+		p {
+			font-family: FuturaPT;
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 0px;
+		}
+
+		a {
+			font-family: FuturaPT;
+			font-size: 15px;
+			text-decoration: underline;
+
+			&:hover {
+				color: #000;
 			}
 		}
 	}
 
-	&-team {
-		.carousel-team {
-			&-title {
-				margin-top: 20px;
-				color: $accent;
-				font-family: Comforta;
-				font-weight: bold;
-				font-size: 18px;
-				display: none;
-			}
-
-			&-text {
-				display: none;
-				margin-top: 5px;
-				font-weight: 600;
-			}
-
-			.owl {
-				&-item {
-					transition: transform 0.25s ease-in;
-					transform: scale(0.6);
-					
-					&.scale-3 {						
-						transform: scale(1);
-						.carousel-team-title, .carousel-team-text {
-							display: block;
-						}	
-					}
-
-					&.scale-2 {
-						transform: scale(0.8);
-					}
-
-					&.scale-1 {
-						&.s-0 {
-							transform: scale(0.6) translateX(70px);
-						}
-						&.s-4 {
-							transform: scale(0.6) translateX(-70px);
-						}
-					}
-				}
-
-				&-nav {
-					position: absolute;
-					bottom: 20px;
-					left: 50%;
-					transform: translateX(-50%);
-					width: 300px;
-				}
-			}
-		}
+	&-subscribe {
+		display: flex;
+		justify-content: space-between;
 	}
 
-	&-work {
-		.carousel-work {
-			&-thumbs {
-				margin-top: 40px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
+	&-input {
+		display: flex;
+		width: 265px;
 
-				.owl-thumb-item {
-					margin: 0 10px 15px;
-				}
-			}
+		.input {
+			width: 220px;
+			text-align: center;
+			background-color: #fff;
+		}
 
-			.owl {	
-				&-prev {
-					left: -100px;
-				}
-
-				&-next {
-					right: -100px;
-				}
-			}
+		.fa {
+			background-color: $default_text_color;
+			color: #ffffff;
+			width: 45px;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
 		}
 	}
 }

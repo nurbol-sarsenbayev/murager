@@ -166,19 +166,17 @@ $(function() {
         },
     });
 
-    $("#carousel-certificate").owlCarousel({
+    $(".carousel-video-call").owlCarousel({
         nav: true,
-        dots: false,
+        dots: true,
         loop: true,
         smartSpeed: 500,
         margin: 30,
         navText: ['', ''],
         responsive: {
             0: { items: 1 },
-            480: { items: 2 },
-            768: { items: 3 },        
-            992: { items: 4, margin: 50 },
-            1200: { items: 4, margin: 100 }        
+            768: { items: 2 },        
+            992: { items: 3 },
         },
     });
 

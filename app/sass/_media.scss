@@ -70,22 +70,37 @@
 
 	.section {
 	
-		&-team {
-			.carousel-team {
-				&-title, &-text {
+		&-video-call {
+
+			&-content {
+				background-image: none;
+			}
+
+			.rect {
+				justify-content: center;
+				width: 100%;
+			}
+			
+			video {
+				margin: 0 0 10px;
+			}
+
+			.video {
+				&-content {
 					display: block;
+					margin-left: 0;
 				}
 
-				.owl {
-					&-nav {
-						width: 100%;
-					}
-
-					&-item {
-						transform: scale(1);
-					}
+				&-title {
+					margin-bottom: 0;
 				}
 			}
+		}
+	}
+
+	.footer {
+		&-subscribe {
+			display: block;
 		}
 	}
 
@@ -100,9 +115,43 @@
 		min-width: auto;
 	}
 
+	.section {
+		&-video-call {
+			
+			.rect {
+				padding: 0 10px;
+			}
+
+			.video {
+				&-title {
+					font-size: 22px;
+				}
+
+				&-fio {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.footer {
+		&-contacts {
+			margin-top: 20px;
+		}
+	}
+
 }
 	/**/
 
+@media only screen and (max-width : 500px) {
+	.section {
+		&-about {
+			&-content {
+				display: block;
+			}
+		}
+	}
+}	
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px) {
@@ -130,6 +179,10 @@
 		&-content {
 			padding: 15px;
 		}
+	}
+
+	.footer {
+		padding-bottom: 83px;
 	}
 
 }
