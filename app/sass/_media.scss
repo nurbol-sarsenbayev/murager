@@ -9,15 +9,21 @@
 	.section {
 		&-how {
 			&-content {
-				// align-items: top;
-
-				& > div {
+				& > img {
+					margin-bottom: 20px;
+					float: left;
+	
+					&:nth-child(1) {
+						margin-right: 60px;
+					}
 					
-					// margin-left: 30px;
-				}
-
-				img {
-					// transform: scale(0.9);
+					&:nth-child(2), &:nth-child(3) {
+						margin-right: 40px;
+					}
+	
+					&:nth-child(5) {
+						margin-right: 60px;
+					}
 				}
 			}
 		}
@@ -69,20 +75,22 @@
 	}
 
 	.section {
+		&-how {
+			&-content {
+				& > img {
+					margin-bottom: 20px;
+					float: left;
 	
-		&-team {
-			.carousel-team {
-				&-title, &-text {
-					display: block;
-				}
-
-				.owl {
-					&-nav {
-						width: 100%;
+					&:nth-child(1) {
+						margin-right: 60px;
 					}
-
-					&-item {
-						transform: scale(1);
+					
+					&:nth-child(2), &:nth-child(3) {
+						margin-right: 40px;
+					}
+	
+					&:nth-child(5) {
+						margin-right: 60px;
 					}
 				}
 			}
