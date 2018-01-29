@@ -12,7 +12,7 @@ $(function() {
         $loader.fadeOut('slow');            
     });
 
-    // $wnd.scroll(function() { onscroll(); });
+    $wnd.scroll(function() { onscroll(); });
 
     var menuTop = $menu.offset().top;
 
@@ -24,7 +24,7 @@ $(function() {
             $top.removeClass('active');
         }
 
-        var scrollPos = $wnd.scrollTop() + 88 + 20;
+        var scrollPos = $wnd.scrollTop() + 149;
 
         $menu.find("a").each(function() {
             var link = $(this);
@@ -40,7 +40,7 @@ $(function() {
         });
     }
 
-    // onscroll();
+    onscroll();
 
     $top.click(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
@@ -64,13 +64,11 @@ $(function() {
         e.preventDefault();
         var $href = $(this).attr('href');
         if($href.length > 0) {
-            var dh = $wnd.outerWidth() < 992 ? 83 : 35;
+            var dh = $wnd.outerWidth() < 992 ? 114 : 149;
             var top = $href.length == 1 ? 0 : $($href).offset().top - dh;
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
         }
     });
-
-    $('.select').selectize();    
 
     $(".modal-open").click(function() {
         var id = $(this).data('id');
@@ -131,41 +129,6 @@ $(function() {
         }
     });    
 
-    $("#carousel-team").owlCarousel({
-        nav: true,
-        dots: false,
-        loop: true,
-        smartSpeed: 500,
-        itemsScaleUp:true,
-        margin: 10,
-        navText: ['', ''],
-        onChanged: function(e) {
-            setTimeout(function() {
-                $(".carousel-team .owl-item").removeClass("scale-1 scale-2 scale-3 s-0 s-4");
-                var items = $(".carousel-team .owl-item.active");
-                if(items.length == 5) {
-                    items.each(function(i, item) {
-                        if(i == 0 || i == 4) $(item).addClass("scale-1 s-"+i)                        
-                        if(i == 1 || i == 3) $(item).addClass("scale-2");
-                        else if(i == 2) $(item).addClass("scale-3");                        
-                    });
-                } 
-                else if(items.length == 3) {
-                    items.each(function(i, item) {
-                        if(i == 0 || i == 2) $(item).addClass("scale-2");
-                        else $(item).addClass("scale-3");                        
-                    });
-                }
-            }, 20);
-        },
-        responsive: {
-            0: { items: 1 },
-            768: { items: 2 },        
-            992: { items: 3 },
-            1200: { items: 5 }        
-        },
-    });
-
     $(".carousel-video-call").owlCarousel({
         nav: true,
         dots: true,
@@ -178,18 +141,6 @@ $(function() {
             768: { items: 2 },        
             992: { items: 3 },
         },
-    });
-
-    $("#carousel-work").owlCarousel({
-        items: 1,
-        nav: true,
-        dots: false,
-        thumbs: true,
-        thumbsPrerendered: true,
-        loop: true,
-        smartSpeed: 500,
-        margin: 30,
-        navText: ['', ''],
     });
 
 });
