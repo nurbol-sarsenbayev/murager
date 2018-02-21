@@ -30,6 +30,7 @@ gulp.task('libs-js', function() {
     return gulp.src([
         'app/libs/jquery/jquery.js',
         'app/libs/owl.carousel/owl.carousel.js',        
+        'app/libs/slick-carousel/slick.js',
         'app/libs/jquery.maskedinput/jquery.maskedinput.js'
     ])
     .pipe(concat('libs.min.js'))

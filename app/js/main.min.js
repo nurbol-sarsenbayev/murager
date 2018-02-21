@@ -30,12 +30,15 @@ $(function() {
             var link = $(this);
             var id = link.attr('href');
             var section = $(id);
-            var sectionTop = section.offset().top;
 
-            if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
-                link.addClass('active');
-            } else {
-                link.removeClass('active');
+            if(section && section.offset()) {
+                var sectionTop = section.offset().top;
+
+                if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+                    link.addClass('active');
+                } else {
+                    link.removeClass('active');
+                }
             }
         });
     }
@@ -141,6 +144,36 @@ $(function() {
             768: { items: 2 },        
             992: { items: 3 },
         },
+    });
+
+    // $(".carousel-product").owlCarousel({
+    //     items: 1,
+    //     nav: false,
+    //     dots: false,
+    //     thumbs: true,
+    //     thumbsPrerendered: true,
+    //     loop: true,
+    //     smartSpeed: 500,
+    //     margin: 30,
+    //     navText: ['', ''],
+    // });
+
+    $(".carousel-product").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.carousel-product-thumbs'
+    });
+
+    $('.carousel-product-thumbs').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.carousel-product',
+        dots: false,
+        focusOnSelect: true,
+        prevArrow: "<i class='carousel-product-prev fa fa-angle-left'>",
+        nextArrow: "<i class='carousel-product-next fa fa-angle-right'>"
     });
 
 });

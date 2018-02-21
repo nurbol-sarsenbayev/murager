@@ -357,6 +357,86 @@ img, video {
 	}
 }
 
+.instrument {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 30px;
+
+	&-title {
+		position: absolute;
+		left: 50%;
+		bottom: 25px;
+		transform: translateX(-50%);
+		font-family: FuturaPT;
+		font-weight: 800;
+		font-size: 20px;
+		color: $accent;
+		padding: 0 48px;
+		white-space: nowrap;
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			margin-top: -13.5px;
+			width: 38px;
+			height: 27px;
+			background-image: url('../img/label-ornament.png');
+		}
+
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+			transform: rotateY(180deg);
+		}
+
+		&.black {
+			color: #241c18;
+		}
+
+		&.without-ornament {
+			bottom: 60px;
+			&:before, &:after {
+				display: none;
+			}
+		}
+		&.alone {
+			position: relative;
+			bottom: 0;
+			left: 0;
+			transform: none;
+			max-width: 290px;
+			white-space: normal;
+			text-align: center;
+		}
+	}
+
+
+}
+
+.title {
+	font-family: FuturaPT;
+	font-size: 20px;
+	font-weight: 500;
+	color: $accent;
+	margin-bottom: 20px;
+}
+
+.table-content {
+	&-item {
+		display: flex;
+	}
+
+	&-line {
+		flex-grow: 1;
+		margin: 0 10px;
+		border-bottom: 1px solid $accent;
+	}
+}
+
 .selectize-control.single {
 
 	.selectize-input {

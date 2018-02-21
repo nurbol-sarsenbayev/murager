@@ -265,7 +265,7 @@ body {
 			font-size: 14px;
 			font-weight: normal;
 
-			a:not(:first-child) {
+			a:last-child {
 				text-decoration: underline;
 			}
 		}
@@ -410,45 +410,7 @@ body {
 	&-instruments {
 		text-align: center;
 
-		.instrument {
-			position: relative;
-			display: inline-block;
-			margin-bottom: 30px;
-
-			&-title {
-				position: absolute;
-				left: 50%;
-				bottom: 25px;
-				transform: translateX(-50%);
-				font-family: FuturaPT;
-				font-weight: 800;
-				font-size: 20px;
-				color: $accent;
-				padding: 0 48px;
-				white-space: nowrap;
-
-				&:before, &:after {
-					position: absolute;
-					content: '';
-					top: 50%;
-					margin-top: -13.5px;
-					width: 38px;
-					height: 27px;
-					background-image: url('../img/label-ornament.png');
-				}
-
-				&:before {
-					left: 0;
-				}
-
-				&:after {
-					right: 0;
-					transform: rotateY(180deg);
-				}
-			}
-
-
-		}
+		
 	}
 
 	&-how {
@@ -636,6 +598,88 @@ body {
 				border-bottom-left-radius: 5px;
 				margin-right: 10px;
 			}
+		}
+	}
+
+	&-product {
+		&-title {
+			text-align: center;
+			margin: 50px 0 40px;
+		}
+
+		&-video {
+			display: block;
+			width: 640px;
+			margin: 0 auto;
+		}
+
+		.alone {
+			margin: 0 auto 20px;
+		}
+
+		.card {
+			max-width: 100%;
+			margin-bottom: 30px;
+			box-shadow: none;
+			border: 1px solid $accent-dark;
+		}
+
+		.carousel-product {
+			margin-bottom: 20px;
+
+			&-prev, &-next {
+				position: absolute;
+				color: $accent;
+				font-size: 40px;
+				top: 50%;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+
+			&-prev {
+				left: 0;
+			}
+
+			&-next {
+				right: 0;
+			}
+
+			&-thumbs {
+				text-align: center;
+				margin-bottom: 50px;
+
+				div {
+					outline: 0;
+				}
+
+				img {
+					width: auto !important;
+				}
+
+				.slick-list {
+					margin: 0 40px;
+				}
+			}
+		}
+	}
+
+	&-info {
+		&-title {
+			
+		}
+
+		&-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 30px;
+			li {
+				&:before {
+					content: "•";
+					margin-right: 10px;
+					color: $accent;
+				}
+			}
+
 		}
 	}
 }

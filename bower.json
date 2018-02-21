@@ -30,6 +30,7 @@
     "font-awesome": "fontawesome#^4.7.0",
     "owl.carousel": "owl-carousel2#^2.2.1",
     "css-hamburgers": "^0.9.1",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "slick-carousel": "^1.8.1"
   }
 }
