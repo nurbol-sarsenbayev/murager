@@ -29,6 +29,9 @@ $(function() {
         $menu.find("a").each(function() {
             var link = $(this);
             var id = link.attr('href');
+
+            id = id.charAt(0) == '/' ? id.substring(1) : id;
+
             var section = $(id);
 
             if(section && section.offset()) {
@@ -64,9 +67,9 @@ $(function() {
     });  
 
     $(".main-menu a").click(function(e) {
-        e.preventDefault();
         var $href = $(this).attr('href');
-        if($href.length > 0) {
+        if($href.length > 0 && $href.charAt(0) !== '/') {
+            e.preventDefault();
             var dh = $wnd.outerWidth() < 992 ? 114 : 149;
             var top = $href.length == 1 ? 0 : $($href).offset().top - dh;
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
